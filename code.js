@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 async function fetchJSONData() {
     try {
-        const response = await fetch("./data.json")
+        const response = await fetch("data.json")
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
