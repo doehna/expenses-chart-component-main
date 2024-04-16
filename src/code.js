@@ -25,9 +25,12 @@ async function fetchJSONData() {
     try {
         const response = await fetch("data.json")
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error(`Network response was not ok: ${response.status} ${response.statusText}`);
         }
-        return await response.json();
+        const text = await response.text(); // Przechwycenie tekstu odpowiedzi
+        console.log(text); // Logowanie tekstu odpowiedzi
+        return JSON.parse(text);
+        //return await response.json();
     }
     catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
