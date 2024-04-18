@@ -1,3 +1,6 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 /* ### Primary */
 $softRed: hsl(10, 79%, 65%);
 $cyan: hsl(186, 34%, 60%);
@@ -11,19 +14,13 @@ $cream: hsl(27, 66%, 92%);
 $veryPaleOrange: hsl(33, 100%, 98%);
 $veryLightGrey: hsl(0, 0%, 93%);
 
-
-@font-face {
-    font-family: DMSans;
-    src: url("fonts/DMSans-VariableFont_opsz,wght.ttf");
-}
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--Cream);
+    background-color: $cream;
     height: 100vh;
-    font-family: DMSans;
+    font-family: "DM Sans", sans-serif;
 }
 
 main {
@@ -115,7 +112,7 @@ p {
             width: 100%;
             background-color: $darkBrown;
             color: $veryPaleOrange;
-            font-family: DMSans;
+            font-family: "DM Sans", sans-serif;
             font-size: 0.85rem;
             font-weight: 500;
             justify-content: center;
