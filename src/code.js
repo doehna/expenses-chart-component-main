@@ -3,16 +3,14 @@ document.addEventListener('DOMContentLoaded', async function () {
         const jsonData = await fetchJSONData();
         const chartBarForDay = document.querySelectorAll(".chart__bar-for-day");
         let lastWeek = changeWeeksOrder(jsonData, new Date().getDay());
-        let arrayIndex = 0;
         let today = getTodayName();
         let max = getMaxOfJson(jsonData);
 
-        chartBarForDay.forEach(element => {
+        chartBarForDay.forEach((element, arrayIndex) => {
             addDayName(arrayIndex, element.lastElementChild, lastWeek);
             addTodayClass(element, today);
             setBarHeight(element.firstElementChild, max, jsonData[arrayIndex]);
             addDailyAmount(element.children[1], lastWeek, arrayIndex);
-            arrayIndex++;
         });
     }
     catch (error) {
@@ -27,10 +25,7 @@ async function fetchJSONData() {
         if (!response.ok) {
             throw new Error(`Network response was not ok: ${response.status} ${response.statusText}`);
         }
-        const text = await response.text(); // Przechwycenie tekstu odpowiedzi
-        console.log(text); // Logowanie tekstu odpowiedzi
-        return JSON.parse(text);
-        //return await response.json();
+        return await response.json();
     }
     catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
