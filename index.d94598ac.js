@@ -54,4 +54,4 @@ function addDailyAmount(element, lastWeek, arrayIndex) {
     element.innerHTML = `$${lastWeek[arrayIndex].amount}`;
 }
 
-//# sourceMappingURL=index.6d0ead65.js.map
+//# sourceMappingURL=index.d94598ac.js.map
