@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html && cp src/data.json dist/data.json",
+    "build-test": "parcel build src/index.html --public-url './' --no-optimize && cp src/data.json dist/data.json",
+    "build": "parcel build src/index.html --public-url './' && cp src/data.json dist/data.json",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
@@ -16,6 +17,9 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.12.0",
-    "parcel": "^2.12.0"
+    "gh-pages": "^6.1.1",
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
   }
 }
