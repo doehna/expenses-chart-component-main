@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 async function fetchJSONData() {
     try {
-        const response = await fetch("data.json")
+        const response = await fetch("https://doehna.github.io/expenses-chart-component-main/data.json")
         if (!response.ok) {
             throw new Error(`Network response was not ok: ${response.status} ${response.statusText}`);
         }
