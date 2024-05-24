@@ -41,7 +41,7 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 
 - Clone the repo
-git clone https://github.com/doehna/age-calculator.git
+git clone https://github.com/doehna/expenses-chart-component-main.git
 
 - Install NPM packages
 ```npm install```
@@ -55,6 +55,7 @@ git clone https://github.com/doehna/age-calculator.git
 
 - Semantic HTML5 markup
 - CSS custom properties
+- JavaScript
 - Flexbox
 - JSON
 - SASS
